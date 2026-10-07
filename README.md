@@ -74,8 +74,9 @@ Interactive filters placed on the left side allow users to analyze the motor veh
 ## 5. Metrics
 
 Loss Ratio: an indication total claims cost relative to total premium.
+
 $$
-Loss Ratio = /frac{Total Cost of Claims}{Total Premium}
+Loss Ratio = \frac{Total Cost of Claims} {Total Premium}
 $$
 
 
