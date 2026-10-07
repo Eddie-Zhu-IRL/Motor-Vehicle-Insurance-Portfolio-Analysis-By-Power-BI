@@ -20,9 +20,10 @@ The objective of this project is to analyze policy and claims data and to transf
 
 ## 3. Dataset
 
-Variables	Description
-ID	Internal identification number assigned to each annual contract formalized by an insured. Each policyholder can have multiple rows in the dataset, representing different annuities of the product.
-Date_start _contract	Start date of the policyholder's contract (DD/MM/YYYY).
+Variables           |	Description
+--------------------|---------------
+ID	                |Internal identification number assigned to each annual contract formalized by an insured. Each policyholder can have multiple rows in the dataset, representing different annuities of the product.
+Date_start _contract|Start date of the policyholder's contract (DD/MM/YYYY).
 Date_last_renewal	Date of last contract renewal (DD/MM/YYYY).
 Date_next_renewal	Date of the next contract renewal (DD/MM/YYYY).
 Distribution_channel	Classifies the channel through which the policy was contracted. 0 for Agent and 1 for Insurance brokers.
