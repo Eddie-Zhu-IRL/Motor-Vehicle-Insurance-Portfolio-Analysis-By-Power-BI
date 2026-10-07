@@ -97,6 +97,18 @@ $$
 {\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
+## 6. Key Portfolio Findings
+
+
+## 7. Tools & Skills
+  7.1 Power BI
+
+  7.2 Skills
+
+
+
+
+
 
 
 
