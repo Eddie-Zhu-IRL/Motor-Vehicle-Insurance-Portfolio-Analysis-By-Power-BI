@@ -118,7 +118,10 @@ The Executive Dashboard shows the following,
     * Actuarial Analytics: Premium, Frequency, Severity, Pure Premium, Loss Ratio
     * Data Analytics: Explanatory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
 
+## 8. Next Steps
 
+  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, in line with the interactive filters on Page 1
+  * Page 3 - Lapse/Retention Analysis
 
 
 
