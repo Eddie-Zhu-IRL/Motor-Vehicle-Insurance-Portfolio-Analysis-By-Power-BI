@@ -101,19 +101,14 @@ $$
 
 
 ## 7. Tools & Skills
-  7.1 Power Query
-    * Data Transformation
-    * Feature Engineering
+
+  * Power Query: Data Transformation, Feature Engineering
   
-  7.2 Power BI
-    * Data Modelling
-    * DAX
-    * Interactive Filtering
-    * Dashboard
-    * KPI Development
+  * Power BI: Data Modelling, DAX, Interactive Filtering, Dashboard, KPI Development
     
-  7.2 Skills
-    *Loss Ratio 
+  * Skills:
+    * Actuarial Analytics: Premium, Frequency, Severity, Pure Premium, Loss Ratio
+    * Data Analytics: Explanatory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
 
 
 
