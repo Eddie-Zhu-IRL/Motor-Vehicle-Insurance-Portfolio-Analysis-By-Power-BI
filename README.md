@@ -123,7 +123,11 @@ The Executive Dashboard shows the following,
   * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, in line with the interactive filters on Page 1
   * Page 3 - Lapse/Retention Analysis
 
+## 9. Disclaimer
 
+This is a personal portfolio project using an openly published and anonymized insurance dataset.
+
+The analysis is intended for applying skills in dashboard and actuarial analytics. The findings presented in the dashboard should not be interpreted as representing the current performance, pricing or underwriting decisions of the underlying insurance company.
 
 
 
