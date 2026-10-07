@@ -20,6 +20,8 @@ The objective of this project is to analyze policy and claims data and to transf
 
 ## 3. Dataset
 
+The dataset includes claims up to 2018, with policy's Date_last_renewal spanning from November 2015 to November 2018.
+
 Part of variables are listed in the following table, which is provided by the authors and can be found via DOI link: https://doi.org/10.17632/5cxyb5fp4f.2.
 
 Variables| Description
@@ -49,6 +51,25 @@ The authors specifies that each row represents a policy during a period with eac
 ## 4. Dashboard
 
 ### 4.1 Page 1: Executive Portfolio Overview
+
+The executive dashboard offers a summary of the following,
+  * Total Policies
+  * Total Claims Cost
+  * Written Premium
+  * Loss Ratio
+  * Claim Frequency
+  * Claim Severity
+  * Pure Premium
+  * Portfolio performance by Policy Renewal Year
+  * Loss Ratio by Risk
+  * Claims Performance by Risk
+
+Interactive filters placed on the left side allow users to analyze the motor vehicle portfolio by,
+  * Risk Type - Motorbikes, Cars, Vans, Agricultural Vehicles
+  * Area - Rural, Urban
+  * Fuel Type - Petrol, Diesel, Non-applicable
+  * Distribution Channel - Agents, Brokers
+  * Policy Renewal Year - 2015, 2016, 2017, 2018 (Note that this year is derived from Date_last_renewal)
 
 
 
