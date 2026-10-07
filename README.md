@@ -76,25 +76,25 @@ Interactive filters placed on the left side allow users to analyze the motor veh
   1. Loss Ratio: ratio of total claims cost relative to total premium.
 
 $$
-Loss Ratio = \frac{Total Cost of Claims} {Total Premium}
+{\text{Loss Ratio}} = \frac{\text{Total Cost of Claims}} {\text{Total Premium}}
 $$
 
   2. Claim Frequency: measure of claim incidence per exposure
 
 $$
-Frequency = \frac{Total Number of Claims} {Total Exposure}
+{\text{Frequency}} = \frac{\text{Total Number of Claims}} {\text{Total Exposure}}
 $$
 
   3. Claim Severity: average cost per claim
 
 $$
-Severity = \frac{Total Cost of Claims} {Total Number of Claims}
+{\text{Severity}} = \frac{\text{Total Cost of Claims}} {\text(Total Number of Claims}}
 $$
 
   4. Pure Premium: average loss per exposure or Frequency multiplied by Severity
 
 $$
-{\text{Pure Premium}} = \frac{Total Cost of Claims} {Total Exposure} = {\text{Frequency}} \times {\text{Severity}}
+{\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
 
