@@ -20,24 +20,40 @@ The objective of this project is to analyze policy and claims data and to transf
 
 ## 3. Dataset
 
-Variables|	Description
+Part of variables are listed in the following table, which is provided by the authors and can be found via DOI link: https://doi.org/10.17632/5cxyb5fp4f.2.
+
+Variables| Description
 ---------|---------------
 ID| Internal identification number assigned to each annual contract formalized by an insured. Each policyholder can have multiple rows in the dataset, representing different annuities of the product.
-Date_start _contract|Start date of the policyholder's contract (DD/MM/YYYY).
-Date_last_renewal|	Date of last contract renewal (DD/MM/YYYY).
-Date_next_renewal|	Date of the next contract renewal (DD/MM/YYYY).
-Distribution_channel |	Classifies the channel through which the policy was contracted. 0 for Agent and 1 for Insurance brokers.
-Seniority |	Total number of years that the insured has been associated with the insurance entity, indicating their level of seniority.
-Premium|	Net premium amount associated with the policy during the current year.
+Date_start _contract| Start date of the policyholder's contract (DD/MM/YYYY).
+Date_last_renewal| Date of last contract renewal (DD/MM/YYYY).
+Date_next_renewal| Date of the next contract renewal (DD/MM/YYYY).
+Distribution_channel| Classifies the channel through which the policy was contracted. 0 for Agent and 1 for Insurance brokers.
+Seniority| Total number of years that the insured has been associated with the insurance entity, indicating their level of seniority.
+Premium| Net premium amount associated with the policy during the current year.
 Cost_claims_year|	Total cost of claims for the insurance policy during the current year.
-N_claims_year|	Total number of claims incurred for the insurance policy during the current year.
-Type_risk|	Type of risk associated with the policy. Each value corresponds to a specific risk type: 1 for motorbikes, 2 for vans, 3 for passenger cars and 4 for agricultural vehicles
+N_claims_year| Total number of claims incurred for the insurance policy during the current year.
+Type_risk| Type of risk associated with the policy. Each value corresponds to a specific risk type: 1 for motorbikes, 2 for vans, 3 for passenger cars and 4 for agricultural vehicles
 Area|	Dichotomous variable indicates the area. 0 for rural and 1 for urban (more than 30,000 inhabitants) in terms of traffic conditions.
-Second_driver|	1 if there are multiple regular drivers declared, or 0 if only one driver is declared.
+Second_driver| 1 if there are multiple regular drivers declared, or 0 if only one driver is declared.
 Year_matriculation|	Year of registration of the vehicle (YYYY).
-Power|	Vehicle power measured in horsepower.
-Cylinder|_capacity	Cylinder capacity of the vehicle.
-Value_vehicle|	Market value of the vehicle on 31/12/2019.
-Type_fuel|	Specific kind of energy source used to power a vehicle. Petrol (P) or Diesel (D).
+Power| Vehicle power measured in horsepower.
+Cylinder_capacity| Cylinder capacity of the vehicle.
+Value_vehicle| Market value of the vehicle on 31/12/2019.
+Type_fuel| Specific kind of energy source used to power a vehicle. Petrol (P) or Diesel (D).
 Length|	Length, in meters, of the vehicle.
 Weight|	Weight, in kilograms, of the vehicle.
+
+The authors specifies that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premiums, are tax deducted.
+
+## 4. Dashboard
+
+### 4.1 Page 1: Executive Portfolio Overview
+
+
+
+
+
+
+
+
