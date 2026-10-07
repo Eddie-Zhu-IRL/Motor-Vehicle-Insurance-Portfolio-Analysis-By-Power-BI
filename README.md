@@ -73,7 +73,7 @@ Interactive filters placed on the left side allow users to analyze the motor veh
 
 **dashboard**
 
-![dashboard](Reports/1. Executive Overview.png)
+![dashboard](Reports/ExecutiveOverview.png)
 
 ## 5. Metrics
 
