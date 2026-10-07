@@ -88,7 +88,7 @@ $$
   3. Claim Severity: average cost per claim
 
 $$
-{\text{Severity}} = \frac{\text{Total Cost of Claims}} {\text(Total Number of Claims}}
+{\text{Severity}} = \frac{\text{Total Cost of Claims}} {\text{Total Number of Claims}}
 $$
 
   4. Pure Premium: average loss per exposure or Frequency multiplied by Severity
