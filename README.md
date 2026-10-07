@@ -99,6 +99,14 @@ $$
 
 ## 6. Key Portfolio Findings
 
+The Executive Dashboard shows the following,
+
+  * The overall portfolio loss ration is 48.61%.
+  * Cars account for the largest portion of written premium, representing circa 83% of the total.
+  * Cars and Vans account for approximately 96% of the total written premium.
+  * Vans have the highest claim frequency among the major four risk categories.
+  * Agricultural Vehicles have very limited claims experience, and therefore its results are not as credible as other risks.
+  * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
 
 ## 7. Tools & Skills
 
