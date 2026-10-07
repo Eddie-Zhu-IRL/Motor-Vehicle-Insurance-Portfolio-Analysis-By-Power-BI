@@ -73,11 +73,30 @@ Interactive filters placed on the left side allow users to analyze the motor veh
 
 ## 5. Metrics
 
-Loss Ratio: an indication total claims cost relative to total premium.
+  1. Loss Ratio: ratio of total claims cost relative to total premium.
 
 $$
 Loss Ratio = \frac{Total Cost of Claims} {Total Premium}
 $$
+
+  2. Claim Frequency: measure of claim incidence per exposure
+
+$$
+Frequency = \frac{Total Number of Claims} {Total Exposure}
+$$
+
+  3. Claim Severity: average cost per claim
+
+$$
+Severity = \frac{Total Cost of Claims} {Total Number of Claims}
+$$
+
+  4. Pure Premium: average loss per exposure or Frequency multiplied by Severity
+
+$$
+{\text{Pure Premium}} = \frac{Total Cost of Claims} {Total Exposure} = {\text{Frequency}} \times {\text{Severity}}
+$$
+
 
 
 
