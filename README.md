@@ -6,14 +6,14 @@ This project uses Microsoft Power BI to analyze data of a motor vehicle insuranc
 Dataset in the project is from an open source - Motor vehicle insurance data, published by Jorge Segura-Gisbert, Josep Lledó and Jose M. Pavía in European Actuarial Journal: 
   Segura-Gisbert, J., Lledó, J. & Pavía, J.M. Dataset of an actual motor vehicle insurance portfolio. Eur. Actuar. J. 15, 241–253 (2025). https://doi.org/10.1007/s13385-024-00398-0
 
-The dataset contains 105,555 rows and 30 variables, from a Spanish non-life motor insurance company. It includes following key features,
+The dataset contains 105,555 rows and 30 variables, from a Spanish non-life motor insurance company. It includes the following key features,
     * Date related information: Date_start_contract, Date_last_renewal, Date_next_renewal for policy management and risk assessment
-    * Economic variables: Premiums, Cost_claims_year for assessing product's profitability
+    * Economic variables: Premium, Cost_claims_year for assessing product's profitability
     * Risk related variables: Value_vehicle, Power, Length, Weight, etc.
 
 ## 2. Project Objective
 
-The objective of this project is to analyze policy and claims data and to transform summary into an interactive analytical dashboard in terms of,
+The objective of this project is to analyze policy and claims data and to transform the data into an interactive analytical dashboard in terms of,
   * Portfolio performance monitoring
   * Claims analysis
   * Insurance metrics for management team
@@ -74,7 +74,7 @@ Interactive filters placed on the left side allow users to analyze the motor veh
 ![dashboard](Reports/ExecutiveOverview.png)
 📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
-## 5. Metrics
+## 5. Metrics & DAX
 
   1. Loss Ratio: ratio of total claims cost relative to total premium.
 
@@ -100,6 +100,14 @@ $$
 {\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
+### DAX
+  * Total Cost of Claims: SUM('Motor vehicle insurance data'[Cost_claims_year])
+  * Total Premiums: SUM('Motor vehicle insurance data'[Premium])
+  * Loss Ratio: DIVIDE([Total Cost of Claims], [Total Premiums], 0)
+  * Claim Frequency: DIVIDE(SUM([N_claims_year]), COUNTROWS('Motor vehicle insurance data'),0)
+  * Claim Severity: DIVIDE([Total Cost of Claims], [Total Policies], 0)
+  * Pure Premium: [Claim Freq] * [Severity]
+
 ## 6. Key Portfolio Findings
 
 The Executive Dashboard shows the following,
@@ -108,10 +116,10 @@ The Executive Dashboard shows the following,
   * Cars account for the largest portion of written premium, representing circa 83% of the total.
   * Cars and Vans account for approximately 96% of the total written premium.
   * Vans have the highest claim frequency among the major four risk categories.
-  * Agricultural Vehicles have very limited claims experience, and therefore its results are not as credible as other risks.
+  * Agricultural Vehicles have very limited claims experience, and therefore their results are not as credible as other risks.
   * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
-  * Cars and Vans have similar Pure Premium around €166 but differ in its drivers. Cars have higher severity than Vans (€416 vs €293), while have lower frequency than Vans (39.67% vs 56.76%).
-  * Policy_renewal_year loss ratio falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
+  * Cars and Vans have similar Pure Premium around €166 but differ in their drivers. Cars have higher severity than Vans (€416 vs €293), but have lower frequency than Vans (39.67% vs 56.76%).
+  * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
     
 ## 7. Tools & Skills
 
@@ -125,13 +133,14 @@ The Executive Dashboard shows the following,
 
 ## 8. Next Steps & Limitations
 
-  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, eg distribution channel, fuel type, Urban/Rural
+  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, e.g. distribution channel, fuel type, Urban/Rural
   * Page 3 - Lapse/Retention Analysis
   
-   ## Limitations:
+   ### 8.1 Limitations:
    
-  1. policy_renewal_year with written premium rather than accident year and earned premium
-  2. policies renewed in 2018 have incomplete claims records
+  1. results are by policy_renewal_year on a written premium basis, not accident year on an earned premium basis
+  2. policies renewed in 2018 have partially developed claims when the data was collected.
+  3. policies renewed in 2015 only cover November an December.
 
 ## 9. Disclaimer
 
