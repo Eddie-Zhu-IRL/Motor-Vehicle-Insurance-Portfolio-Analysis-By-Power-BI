@@ -13,6 +13,11 @@ The Executive Dashboard shows the following,
   * Cars and Vans have similar Pure Premium around €166 but differ in their drivers. Cars have higher severity than Vans (€416 vs €293), but have lower frequency than Vans (39.67% vs 56.76%).
   * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have partially developed claims when data was collected.
 
+
+![dashboard](Reports/ExecutiveOverview.png)
+
+📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
+
 ## 1. Project Overview
 
 This project uses Microsoft Power BI to analyze data of a motor vehicle insurance portfolio, with the objective of understanding the portfolio's performance, claims experience and differences across major risk segments.
@@ -64,10 +69,6 @@ Weight|	Weight, in kilograms, of the vehicle.
 The authors specify that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premium, are tax deducted.
 
 ## 4. Dashboard
-
-![dashboard](Reports/ExecutiveOverview.png)
-
-📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
 ### 4.1 Page 1: Executive Portfolio Overview
 
