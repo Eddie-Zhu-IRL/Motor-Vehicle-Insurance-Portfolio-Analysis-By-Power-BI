@@ -122,7 +122,7 @@ The Executive Dashboard shows the following,
 
 ## 8. Next Steps
 
-  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, in line with the interactive filters on Page 1
+  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments
   * Page 3 - Lapse/Retention Analysis
 
 ## 9. Disclaimer
