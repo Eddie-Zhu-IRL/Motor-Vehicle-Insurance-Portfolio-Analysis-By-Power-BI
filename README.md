@@ -72,6 +72,7 @@ Interactive filters placed on the left side allow users to analyze the motor veh
   * Policy Renewal Year - 2015, 2016, 2017, 2018 (Note that this year is derived from Date_last_renewal)
 
 ![dashboard](Reports/ExecutiveOverview.png)
+📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
 ## 5. Metrics
 
