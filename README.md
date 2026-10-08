@@ -1,4 +1,17 @@
 # Motor Vehicle Insurance Portfolio Analysis By Power BI
+
+## Key Portfolio Findings
+
+The Executive Dashboard shows the following,
+  * The overall portfolio loss ratio is 48.61%.
+  * Cars account for the largest portion of written premium, representing circa 83% of the total.
+  * Cars and Vans account for approximately 96% of the total written premium.
+  * Vans have the highest claim frequency among the major four risk categories.
+  * Agricultural Vehicles have very limited claims experience, and therefore their results are not as credible as other risks.
+  * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
+  * Cars and Vans have similar Pure Premium around €166 but differ in their drivers. Cars have higher severity than Vans (€416 vs €293), but have lower frequency than Vans (39.67% vs 56.76%).
+  * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
+
 ## 1. Project Overview
 
 This project uses Microsoft Power BI to analyze data of a motor vehicle insurance portfolio, with the objective of understanding the portfolio's performance, claims experience and differences across major risk segments.
@@ -108,21 +121,8 @@ $$
   * Claim Frequency: DIVIDE(SUM([N_claims_year]), COUNTROWS('Motor vehicle insurance data'),0)
   * Claim Severity: DIVIDE([Total Cost of Claims], [Total Policies], 0)
   * Pure Premium: [Claim Freq] * [Severity]
-
-## 6. Key Portfolio Findings
-
-The Executive Dashboard shows the following,
-
-  * The overall portfolio loss ratio is 48.61%.
-  * Cars account for the largest portion of written premium, representing circa 83% of the total.
-  * Cars and Vans account for approximately 96% of the total written premium.
-  * Vans have the highest claim frequency among the major four risk categories.
-  * Agricultural Vehicles have very limited claims experience, and therefore their results are not as credible as other risks.
-  * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
-  * Cars and Vans have similar Pure Premium around €166 but differ in their drivers. Cars have higher severity than Vans (€416 vs €293), but have lower frequency than Vans (39.67% vs 56.76%).
-  * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
     
-## 7. Tools & Skills
+## 6. Tools & Skills
 
   * Power Query: Data Transformation, Feature Engineering
   
@@ -132,18 +132,18 @@ The Executive Dashboard shows the following,
     * Actuarial Analytics: Premium, Frequency, Severity, Pure Premium, Loss Ratio
     * Data Analytics: Exploratory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
 
-## 8. Next Steps & Limitations
+## 7. Next Steps & Limitations
 
+   ### 7.1 Next Steps (Planned)
   * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, e.g. distribution channel, fuel type, Urban/Rural
   * Page 3 - Lapse/Retention Analysis
   
-   ### 8.1 Limitations:
-   
+   ### 7.2 Limitations:   
   1. results are by policy_renewal_year on a written premium basis, not accident year on an earned premium basis
   2. policies renewed in 2018 have partially developed claims when the data was collected.
   3. policies renewed in 2015 only cover November an December.
 
-## 9. Disclaimer
+## 8. Disclaimer
 
 This is a personal portfolio project using an openly published and anonymized insurance dataset.
 
