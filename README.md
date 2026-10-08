@@ -162,7 +162,10 @@ This is a personal portfolio project using an openly published and anonymized in
 The analysis is intended for applying skills in dashboard and actuarial analytics. The findings presented in the dashboard should not be interpreted as representing the current performance, pricing or underwriting decisions of the underlying insurance company.
 
 
+👨‍💻 Author
 
+**Eddie Zhu** <br>
+Data Analyst / Aspiring Actuary
 
 
 
