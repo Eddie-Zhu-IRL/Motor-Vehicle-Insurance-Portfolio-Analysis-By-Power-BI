@@ -1,7 +1,7 @@
 # Motor Vehicle Insurance Portfolio Analysis By Power BI
 ## 1. Project Overview
 
-This project uses Microsoft Power BI to analyzes data of a motor vehicle insurance portfolio, with the objective of understanding portfolio's performance, claims experience and differences across major risk segments.
+This project uses Microsoft Power BI to analyze data of a motor vehicle insurance portfolio, with the objective of understanding the portfolio's performance, claims experience and differences across major risk segments.
 
 Dataset in the project is from an open source - Motor vehicle insurance data, published by Jorge Segura-Gisbert, Josep Lledó and Jose M. Pavía in European Actuarial Journal: 
   Segura-Gisbert, J., Lledó, J. & Pavía, J.M. Dataset of an actual motor vehicle insurance portfolio. Eur. Actuar. J. 15, 241–253 (2025). https://doi.org/10.1007/s13385-024-00398-0
@@ -27,7 +27,7 @@ Part of variables are listed in the following table, which is provided by the au
 Variables| Description
 ---------|---------------
 ID| Internal identification number assigned to each annual contract formalized by an insured. Each policyholder can have multiple rows in the dataset, representing different annuities of the product.
-Date_start _contract| Start date of the policyholder's contract (DD/MM/YYYY).
+Date_start_contract| Start date of the policyholder's contract (DD/MM/YYYY).
 Date_last_renewal| Date of last contract renewal (DD/MM/YYYY).
 Date_next_renewal| Date of the next contract renewal (DD/MM/YYYY).
 Distribution_channel| Classifies the channel through which the policy was contracted. 0 for Agent and 1 for Insurance brokers.
@@ -46,7 +46,7 @@ Type_fuel| Specific kind of energy source used to power a vehicle. Petrol (P) or
 Length|	Length, in meters, of the vehicle.
 Weight|	Weight, in kilograms, of the vehicle.
 
-The authors specifies that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premiums, are tax deducted.
+The authors specify that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premiums, are tax deducted.
 
 ## 4. Dashboard
 
@@ -103,13 +103,13 @@ $$
 
 The Executive Dashboard shows the following,
 
-  * The overall portfolio loss ration is 48.61%.
+  * The overall portfolio loss ratio is 48.61%.
   * Cars account for the largest portion of written premium, representing circa 83% of the total.
   * Cars and Vans account for approximately 96% of the total written premium.
   * Vans have the highest claim frequency among the major four risk categories.
   * Agricultural Vehicles have very limited claims experience, and therefore its results are not as credible as other risks.
   * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
-  * Cars and Vans have similar Pure Premium around €166 but differ in its drivers. Cars have higher severity than Vans (€416 VS €293), while have lower frequency than Vans (39.67% Vs 56.76%).
+  * Cars and Vans have similar Pure Premium around €166 but differ in its drivers. Cars have higher severity than Vans (€416 vs €293), while have lower frequency than Vans (39.67% vs 56.76%).
   * Policy_renewal_year loss ratio falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
     
 ## 7. Tools & Skills
@@ -120,7 +120,7 @@ The Executive Dashboard shows the following,
     
   * Skills:
     * Actuarial Analytics: Premium, Frequency, Severity, Pure Premium, Loss Ratio
-    * Data Analytics: Explanatory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
+    * Data Analytics: Exploratory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
 
 ## 8. Next Steps & Limitations
 
