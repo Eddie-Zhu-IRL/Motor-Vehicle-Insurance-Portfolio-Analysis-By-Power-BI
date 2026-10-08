@@ -109,7 +109,9 @@ The Executive Dashboard shows the following,
   * Vans have the highest claim frequency among the major four risk categories.
   * Agricultural Vehicles have very limited claims experience, and therefore its results are not as credible as other risks.
   * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
-
+  * Cars and Vans have similar Pure Premium around €166 but differ in its drivers. Cars have higher severity than Vans (€416 VS €293), while have lower frequency than Vans (39.67% Vs 56.76%).
+  * Policy_renewal_year loss ratio falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
+    
 ## 7. Tools & Skills
 
   * Power Query: Data Transformation, Feature Engineering
@@ -120,10 +122,14 @@ The Executive Dashboard shows the following,
     * Actuarial Analytics: Premium, Frequency, Severity, Pure Premium, Loss Ratio
     * Data Analytics: Explanatory Data Analysis, Data Engineering, Interpretation and Implementation of Metrics
 
-## 8. Next Steps
+## 8. Next Steps & Limitations
 
-  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments
+  * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, eg distribution channel, fuel type, Urban/Rural
   * Page 3 - Lapse/Retention Analysis
+  *
+  * ## Limitations:
+      1. policy_renewal_year with written premium rather than accident year and earned premium
+      2. policies renewed in 2018 have incomplete claims records
 
 ## 9. Disclaimer
 
