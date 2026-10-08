@@ -20,9 +20,10 @@ Dataset in the project is from an open source - Motor vehicle insurance data, pu
   Segura-Gisbert, J., Lledó, J. & Pavía, J.M. Dataset of an actual motor vehicle insurance portfolio. Eur. Actuar. J. 15, 241–253 (2025). https://doi.org/10.1007/s13385-024-00398-0
 
 The dataset contains 105,555 rows and 30 variables, from a Spanish non-life motor insurance company. It includes the following key features,
-    * Date related information: Date_start_contract, Date_last_renewal, Date_next_renewal for policy management and risk assessment
-    * Economic variables: Premium, Cost_claims_year for assessing product's profitability
-    * Risk related variables: Value_vehicle, Power, Length, Weight, etc.
+
+* Date related information: Date_start_contract, Date_last_renewal, Date_next_renewal for policy management and risk assessment
+* Economic variables: Premium, Cost_claims_year for assessing product's profitability
+* Risk related variables: Value_vehicle, Power, Length, Weight, etc.
 
 ## 2. Project Objective
 
@@ -35,7 +36,7 @@ The objective of this project is to analyze policy and claims data and to transf
 
 The dataset includes claims up to 2018, with policy's Date_last_renewal spanning from November 2015 to November 2018.
 
-Part of variables are listed in the following table, which is provided by the authors and can be found via DOI link: https://doi.org/10.17632/5cxyb5fp4f.2.
+Some of variables are listed in the following table, which is provided by the authors and can be found via DOI link: https://doi.org/10.17632/5cxyb5fp4f.2.
 
 Variables| Description
 ---------|---------------
@@ -59,9 +60,13 @@ Type_fuel| Specific kind of energy source used to power a vehicle. Petrol (P) or
 Length|	Length, in meters, of the vehicle.
 Weight|	Weight, in kilograms, of the vehicle.
 
-The authors specify that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premiums, are tax deducted.
+The authors specify that each row represents a policy during a period with each column corresponding to a specific variable. Each policyholder can have multiple rows with varying maturity dates, corresponding to annual observation window. The monetary variables, such as Premium, are tax deducted.
 
 ## 4. Dashboard
+
+![dashboard](Reports/ExecutiveOverview.png)
+
+📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
 ### 4.1 Page 1: Executive Portfolio Overview
 
@@ -83,9 +88,6 @@ Interactive filters placed on the left side allow users to analyze the motor veh
   * Fuel Type - Petrol, Diesel, Non-applicable
   * Distribution Channel - Agents, Brokers
   * Policy Renewal Year - 2015, 2016, 2017, 2018 (Note that this year is derived from Date_last_renewal)
-
-![dashboard](Reports/ExecutiveOverview.png)
-📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
 ## 5. Metrics & DAX
 ### 5.1 Metrics
@@ -114,13 +116,17 @@ $$
 {\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
+As noted by authors, each row represents a policy that is automatically renewed annually until either the policy holder decides to cancel it, or the insurer terminates it due-to non-payment. Exposure in the analysis is considered as 1 year per record. Total Policies 105,555 is the number of policy records, not distinct policies or policyholders.
+
 ### 5.2 DAX
-  * Total Cost of Claims: SUM('Motor vehicle insurance data'[Cost_claims_year])
-  * Total Premiums: SUM('Motor vehicle insurance data'[Premium])
-  * Loss Ratio: DIVIDE([Total Cost of Claims], [Total Premiums], 0)
-  * Claim Frequency: DIVIDE(SUM([N_claims_year]), COUNTROWS('Motor vehicle insurance data'),0)
-  * Claim Severity: DIVIDE([Total Cost of Claims], [Total Policies], 0)
-  * Pure Premium: [Claim Freq] * [Severity]
+  * Total Cost of Claims = SUM('Motor vehicle insurance data'[Cost_claims_year])
+  * Total Premiums = SUM('Motor vehicle insurance data'[Premium])
+  * Total Claims = SUM('Motor vehicle insurance data'[N_claims_year])
+  * Total Policies = COUNTROWS('Motor vehicle insurance data'[ID])
+  * Loss Ratio = DIVIDE([Total Cost of Claims], [Total Premiums], 0)
+  * Claim Frequency = DIVIDE(SUM([N_claims_year]), COUNTROWS('Motor vehicle insurance data'),0)
+  * Claim Severity = DIVIDE([Total Cost of Claims], [Total Claims], 0)
+  * Pure Premium = [Claim Frequency] * [Claim Severity]
     
 ## 6. Tools & Skills
 
@@ -139,9 +145,9 @@ $$
   * Page 3 - Lapse/Retention Analysis
   
    ### 7.2 Limitations:   
-  1. results are by policy_renewal_year on a written premium basis, not accident year on an earned premium basis
-  2. policies renewed in 2018 have partially developed claims when the data was collected.
-  3. policies renewed in 2015 only cover November an December.
+  1. Results are by policy_renewal_year on a written premium basis, not accident year on an earned premium basis.
+  2. Policies renewed in 2018 have partially developed claims when the data was collected.
+  3. Policies renewed in 2015 only cover November and December.
 
 ## 8. Disclaimer
 
