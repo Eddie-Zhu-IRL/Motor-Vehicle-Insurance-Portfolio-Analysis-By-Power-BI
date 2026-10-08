@@ -129,8 +129,8 @@ The Executive Dashboard shows the following,
   
    ## Limitations:
    
-      1. policy_renewal_year with written premium rather than accident year and earned premium
-      2. policies renewed in 2018 have incomplete claims records
+    1. policy_renewal_year with written premium rather than accident year and earned premium
+    2. policies renewed in 2018 have incomplete claims records
 
 ## 9. Disclaimer
 
