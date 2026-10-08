@@ -1,4 +1,5 @@
 # Motor Vehicle Insurance Portfolio Analysis By Power BI
+An interactive 
 
 ## Key Portfolio Findings
 
@@ -6,11 +7,11 @@ The Executive Dashboard shows the following,
   * The overall portfolio loss ratio is 48.61%.
   * Cars account for the largest portion of written premium, representing circa 83% of the total.
   * Cars and Vans account for approximately 96% of the total written premium.
-  * Vans have the highest claim frequency among the major four risk categories.
+  * Vans have the highest claim frequency among the four main risk categories.
   * Agricultural Vehicles have very limited claims experience, and therefore their results are not as credible as other risks.
   * Motorbikes have lower Claim Frequency and Loss Ratio than Cars and Vans.
   * Cars and Vans have similar Pure Premium around €166 but differ in their drivers. Cars have higher severity than Vans (€416 vs €293), but have lower frequency than Vans (39.67% vs 56.76%).
-  * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have not yet reported losses when data was collected.
+  * Loss Ratio by policy_renewal_year falls from 77.43% in 2016 to 20.76% in 2018 (Jan-Nov). Note that loss ratio for 2018 is understated, as policies renewed in 2018 have partially developed claims when data was collected.
 
 ## 1. Project Overview
 
@@ -30,7 +31,7 @@ The dataset contains 105,555 rows and 30 variables, from a Spanish non-life moto
 The objective of this project is to analyze policy and claims data and to transform the data into an interactive analytical dashboard in terms of,
   * Portfolio performance monitoring
   * Claims analysis
-  * Insurance metrics for management team
+  * Insurance metrics for the management team
 
 ## 3. Dataset
 
@@ -116,17 +117,21 @@ $$
 {\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
-As noted by authors, each row represents a policy that is automatically renewed annually until either the policy holder decides to cancel it, or the insurer terminates it due-to non-payment. Exposure in the analysis is considered as 1 year per record. Total Policies 105,555 is the number of policy records, not distinct policies or policyholders.
+As noted by the authors, each row represents a policy that is automatically renewed annually until either the policyholder decides to cancel it, or the insurer terminates it due to non-payment. Exposure in the analysis is considered as 1 year per record. Total Policies 105,555 is the number of policy records, not distinct policies or policyholders.
 
 ### 5.2 DAX
-  * Total Cost of Claims = SUM('Motor vehicle insurance data'[Cost_claims_year])
-  * Total Premiums = SUM('Motor vehicle insurance data'[Premium])
-  * Total Claims = SUM('Motor vehicle insurance data'[N_claims_year])
-  * Total Policies = COUNTROWS('Motor vehicle insurance data'[ID])
-  * Loss Ratio = DIVIDE([Total Cost of Claims], [Total Premiums], 0)
-  * Claim Frequency = DIVIDE(SUM([N_claims_year]), COUNTROWS('Motor vehicle insurance data'),0)
-  * Claim Severity = DIVIDE([Total Cost of Claims], [Total Claims], 0)
-  * Pure Premium = [Claim Frequency] * [Claim Severity]
+
+```dax
+   Total Cost of Claims = SUM('Motor vehicle insurance data'[Cost_claims_year])
+   Total Premiums = SUM('Motor vehicle insurance data'[Premium])
+   Total Claims = SUM('Motor vehicle insurance data'[N_claims_year])
+   Total Policies = COUNTROWS('Motor vehicle insurance data')
+
+   Loss Ratio = DIVIDE([Total Cost of Claims], [Total Premiums], 0)
+   Claim Frequency = DIVIDE([Total Claims], [Total Policies],0)
+   Claim Severity = DIVIDE([Total Cost of Claims], [Total Claims], 0)
+   Pure Premium = [Claim Frequency] * [Claim Severity]
+```
     
 ## 6. Tools & Skills
 
@@ -144,7 +149,7 @@ As noted by authors, each row represents a policy that is automatically renewed 
   * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, e.g. distribution channel, fuel type, Urban/Rural
   * Page 3 - Lapse/Retention Analysis
   
-   ### 7.2 Limitations:   
+   ### 7.2 Limitations   
   1. Results are by policy_renewal_year on a written premium basis, not accident year on an earned premium basis.
   2. Policies renewed in 2018 have partially developed claims when the data was collected.
   3. Policies renewed in 2015 only cover November and December.
