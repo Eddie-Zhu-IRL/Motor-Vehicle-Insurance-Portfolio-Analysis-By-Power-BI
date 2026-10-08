@@ -71,9 +71,7 @@ Interactive filters placed on the left side allow users to analyze the motor veh
   * Distribution Channel - Agents, Brokers
   * Policy Renewal Year - 2015, 2016, 2017, 2018 (Note that this year is derived from Date_last_renewal)
 
-**dashboard**
-
-![dashboard](Reports/ExecutiveOverview.png)
+!(Reports/ExecutiveOverview.png)
 
 ## 5. Metrics
 
