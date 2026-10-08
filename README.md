@@ -75,6 +75,7 @@ Interactive filters placed on the left side allow users to analyze the motor veh
 📥 [Download the interactive dashboard (.pbix)](PowerBI/Motor%20Vehicle%20Insurance%20Portfolio.pbix) — open in Power BI Desktop.
 
 ## 5. Metrics & DAX
+### 5.1 Metrics
 
   1. Loss Ratio: ratio of total claims cost relative to total premium.
 
@@ -100,7 +101,7 @@ $$
 {\text{Pure Premium}} = \frac{\text{Total Cost of Claims}} {\text{Total Exposure}} = {\text{Frequency}} \times {\text{Severity}}
 $$
 
-### DAX
+### 5.2 DAX
   * Total Cost of Claims: SUM('Motor vehicle insurance data'[Cost_claims_year])
   * Total Premiums: SUM('Motor vehicle insurance data'[Premium])
   * Loss Ratio: DIVIDE([Total Cost of Claims], [Total Premiums], 0)
