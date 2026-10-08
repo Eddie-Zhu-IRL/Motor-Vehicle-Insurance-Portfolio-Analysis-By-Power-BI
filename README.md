@@ -127,7 +127,7 @@ The Executive Dashboard shows the following,
   * Page 2 - Risk & Claims Analysis: to investigate the main drivers of claims performance across different segments, eg distribution channel, fuel type, Urban/Rural
   * Page 3 - Lapse/Retention Analysis
   
-   ## Limitations:
+   ### Limitations:
       1. policy_renewal_year with written premium rather than accident year and earned premium
       2. policies renewed in 2018 have incomplete claims records
 
