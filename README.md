@@ -1,5 +1,5 @@
 # Motor Vehicle Insurance Portfolio Analysis By Power BI
-An interactive 
+An interactive Power BI dashboard analyzing 105,555 policy records (11.2015 - 11.2018) from a Spanish motor insurer, covering loss ratio, claim frequency, severity and pure premium by risk segment.
 
 ## Key Portfolio Findings
 
